@@ -78,6 +78,15 @@
 			path = "JSON Decode";
 			sourceTree = "<group>";
 		};
+		7E2A42B923DCD3B7002FE2A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E3A2C3F23D9B2AA006E285C /* ViewController.swift */,
+				7E2A42B723DCAF5B002FE2A1 /* ViewInputProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7E3A2C2F23D9B2AA006E285C = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +108,7 @@
 			children = (
 				7E3A2C3B23D9B2AA006E285C /* AppDelegate.swift */,
 				7E3A2C3D23D9B2AA006E285C /* SceneDelegate.swift */,
-				7E3A2C3F23D9B2AA006E285C /* ViewController.swift */,
-				7E2A42B723DCAF5B002FE2A1 /* ViewInputProtocol.swift */,
+				7E2A42B923DCD3B7002FE2A1 /* View */,
 				7E2A42A623DCA9E2002FE2A1 /* ViewModel.swift */,
 				7E2A42B323DCAB47002FE2A1 /* ViewModelProtocol.swift */,
 				7E2A42B523DCAC39002FE2A1 /* ViewModelNetworkOutputProtocol.swift */,

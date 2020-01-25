@@ -17,6 +17,6 @@ protocol ViewInputProtocol {
     func setCarAnnotation(coordinate: CLLocationCoordinate2D)
     func dismiss()
     func showError(message: String)
-    func okAlert(title: String, message: String)
+    func showOkAlert(title: String, message: String)
     func updateButton(flag: Bool)
 }

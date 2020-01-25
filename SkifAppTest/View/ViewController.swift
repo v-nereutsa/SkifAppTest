@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadingAlert()
+        showLoadingAlert()
     }
     
     @IBAction func startMoving(_ sender: Any) {
@@ -47,7 +47,7 @@ extension ViewController: ViewInputProtocol {
     func showError(message: String) {
         DispatchQueue.main.async {
             self.dismiss(animated: false, completion: { [weak self] in
-                self?.okAlert(title: "Error", message: message)
+                self?.showOkAlert(title: "Error", message: message)
             })
         }
     }
@@ -130,7 +130,7 @@ extension ViewController: MKMapViewDelegate {
 
 extension ViewController {
     
-    func okAlert(title: String, message: String) {
+    func showOkAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
@@ -138,12 +138,12 @@ extension ViewController {
     }
     
     
-    func loadingAlert() {
+    func showLoadingAlert() {
         let alert = UIAlertController(title: nil, message: "Loading...", preferredStyle: .alert)
 
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
         loadingIndicator.startAnimating();
 
         alert.view.addSubview(loadingIndicator)

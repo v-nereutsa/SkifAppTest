@@ -19,7 +19,7 @@ class ViewModel: ViewModelNetworkOutputProtocol, ViewModelProtocol {
     var coordinateIndex: Int! = 0 {
         didSet {
             guard coordinateIndex != locations.count else {
-                viewController?.okAlert(title: "Finish", message: "The car reached the finish.")
+                viewController?.showOkAlert(title: "Finish", message: "The car reached the finish.")
                 return
             }
             if isStarted {
